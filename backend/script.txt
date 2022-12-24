@@ -1,0 +1,10 @@
+Тренировка сети: 
+python3 main.py --dataset archive_images/COVID19 --model output/covid/simple_nn.model --label-bin output/covid/simple_nn_lb.pickle --plot output/covid/simple_nn_plot.png
+python3 main.py --dataset archive_images/PNEUMONIA --model output/pneumonia/simple_nn.model --label-bin output/pneumonia/simple_nn_lb.pickle --plot output/pneumonia/simple_nn_plot.png
+python3 main.py --dataset archive_images/TUBERCULOSIS --model output/tuberculosis/simple_nn.model --label-bin output/tuberculosis/simple_nn_lb.pickle --plot output/tuberculosis/simple_nn_plot.png
+
+Предсказание сети:
+python3 predict.py --image archive/IMAGES/N.jpg --model output/simple_nn.model --label-bin output/simple_nn_lb.pickle --width 32 --height 32 --flatten 1
+python3 predict.py --image archive/IMAGES/C.jpg --model output/simple_nn.model --label-bin output/simple_nn_lb.pickle --width 32 --height 32 --flatten 1
+python3 predict.py --image archive/IMAGES/T.jpg --model output/simple_nn.model --label-bin output/simple_nn_lb.pickle --width 32 --height 32 --flatten 1
+python3 predict.py --image archive/IMAGES/P.jpg --model output/simple_nn.model --label-bin output/simple_nn_lb.pickle --width 32 --height 32 --flatten 1
